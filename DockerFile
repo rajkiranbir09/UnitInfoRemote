@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE=target/UnitInfoService-1.0.jar
+COPY ${JAR_FILE} UnitInfoService-1.0.jar
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Dserver.port=8080 -Djava.security.egd=file:/dev/./urandom -jar /UnitInfoService`-1.0.jar"]
