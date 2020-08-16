@@ -33,6 +33,11 @@ public class UnitInfoController {
 	public  FinalResponse getUnitInfo(String unitIdentificationValue, String identificatorType) {
 		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
 	}
+	
+	@GetMapping("/getAllInfo")
+	public FinalResponse getAllInfo(String unitIdentificationValue, String unitIdentificationValue) {
+		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
+	}
 
 	public String getAllInfoAbout(String Value) {
 		return "Hello"+Value;
