@@ -34,6 +34,20 @@ public class UnitInfoController {
 		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
 	}
 	
+	/**
+	 * 1. Prepare request parameter for updateFailureAnalysis SL API using JAXB
+	 * 2. Get the http response
+	 * 3. Insert data into updateFailureAnalysis SL API
+	 * 
+	 * @param faInfo
+	 * 
+	 * @return PerformFAResponse
+	 */
+	@PostMapping("/performFA")
+	public FinalResponse performFA(@RequestBody FAInfo faInfo) {
+		return failureAnalysisService.performFA(faInfo);
+	}
+
 	@GetMapping("/getAllInfo")
 	public FinalResponse getAllInfo(String unitIdentificationValue, String identificatorType) {
 		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
