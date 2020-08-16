@@ -34,4 +34,7 @@ public class UnitInfoController {
 		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
 	}
 
+	public String getAllInfoAbout(String Value) {
+		return "Hello"+Value;
+	}
 }
