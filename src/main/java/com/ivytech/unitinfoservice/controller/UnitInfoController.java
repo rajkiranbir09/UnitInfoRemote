@@ -35,7 +35,7 @@ public class UnitInfoController {
 	}
 	
 	@GetMapping("/getAllInfo")
-	public FinalResponse getAllInfo(String unitIdentificationValue, String unitIdentificationValue) {
+	public FinalResponse getAllInfo(String unitIdentificationValue, String identificatorType) {
 		return unitinfoservice.getUnitInfo(unitIdentificationValue,identificatorType);
 	}
 
